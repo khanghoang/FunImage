@@ -15,6 +15,9 @@
 		23BB32851C590870000E8C72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BB32831C590870000E8C72 /* LaunchScreen.storyboard */; };
 		23BB32901C590870000E8C72 /* ImageXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB328F1C590870000E8C72 /* ImageXTests.m */; };
 		23BB329B1C590870000E8C72 /* ImageXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB329A1C590870000E8C72 /* ImageXUITests.m */; };
+		23C540551C5917E900C01B03 /* KHHomeImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C540531C5917E900C01B03 /* KHHomeImageCollectionViewCell.m */; };
+		23C540561C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C540541C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib */; };
+		983576023E33ABE8E65E2144 /* libPods-ImageX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923FF6DDBF7BE13343A012B2 /* libPods-ImageX.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		23BB32961C590870000E8C72 /* ImageXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BB329A1C590870000E8C72 /* ImageXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageXUITests.m; sourceTree = "<group>"; };
 		23BB329C1C590870000E8C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C540501C59100B00C01B03 /* ImageX-prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageX-prefix.h"; sourceTree = "<group>"; };
+		23C540521C5917E900C01B03 /* KHHomeImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHHomeImageCollectionViewCell.h; sourceTree = "<group>"; };
+		23C540531C5917E900C01B03 /* KHHomeImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHHomeImageCollectionViewCell.m; sourceTree = "<group>"; };
+		23C540541C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KHHomeImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		58DC2E16F8B74D6AC2C99C2B /* Pods-ImageX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageX/Pods-ImageX.debug.xcconfig"; sourceTree = "<group>"; };
+		923FF6DDBF7BE13343A012B2 /* libPods-ImageX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8C7F3C80DF2BFA580C2680 /* Pods-ImageX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageX.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageX/Pods-ImageX.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983576023E33ABE8E65E2144 /* libPods-ImageX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,8 @@
 				23BB328E1C590870000E8C72 /* ImageXTests */,
 				23BB32991C590870000E8C72 /* ImageXUITests */,
 				23BB32731C590870000E8C72 /* Products */,
+				35284298ED9998E6B7FC64B0 /* Pods */,
+				DECC5C9D53304C98AA25472A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +114,7 @@
 		23BB32741C590870000E8C72 /* ImageX */ = {
 			isa = PBXGroup;
 			children = (
+				23C540511C5917BB00C01B03 /* Home */,
 				23BB32781C590870000E8C72 /* AppDelegate.h */,
 				23BB32791C590870000E8C72 /* AppDelegate.m */,
 				23BB327B1C590870000E8C72 /* ViewController.h */,
@@ -118,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				23BB32761C590870000E8C72 /* main.m */,
+				23C540501C59100B00C01B03 /* ImageX-prefix.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +155,34 @@
 			path = ImageXUITests;
 			sourceTree = "<group>";
 		};
+		23C540511C5917BB00C01B03 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				23C540521C5917E900C01B03 /* KHHomeImageCollectionViewCell.h */,
+				23C540531C5917E900C01B03 /* KHHomeImageCollectionViewCell.m */,
+				23C540541C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib */,
+			);
+			name = Home;
+			path = ViewControllers/Home;
+			sourceTree = "<group>";
+		};
+		35284298ED9998E6B7FC64B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58DC2E16F8B74D6AC2C99C2B /* Pods-ImageX.debug.xcconfig */,
+				CE8C7F3C80DF2BFA580C2680 /* Pods-ImageX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DECC5C9D53304C98AA25472A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				923FF6DDBF7BE13343A012B2 /* libPods-ImageX.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23BB329F1C590870000E8C72 /* Build configuration list for PBXNativeTarget "ImageX" */;
 			buildPhases = (
+				E61A8199533E15CA94B7C935 /* Check Pods Manifest.lock */,
 				23BB326E1C590870000E8C72 /* Sources */,
 				23BB326F1C590870000E8C72 /* Frameworks */,
 				23BB32701C590870000E8C72 /* Resources */,
+				2578B45DBE8F96641D0584BC /* Embed Pods Frameworks */,
+				09ECF8A9E92EA6447974F6B7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C540561C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib in Resources */,
 				23BB32851C590870000E8C72 /* LaunchScreen.storyboard in Resources */,
 				23BB32821C590870000E8C72 /* Assets.xcassets in Resources */,
 				23BB32801C590870000E8C72 /* Main.storyboard in Resources */,
@@ -265,11 +312,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09ECF8A9E92EA6447974F6B7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageX/Pods-ImageX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2578B45DBE8F96641D0584BC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageX/Pods-ImageX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E61A8199533E15CA94B7C935 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23BB326E1C590870000E8C72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C540551C5917E900C01B03 /* KHHomeImageCollectionViewCell.m in Sources */,
 				23BB327D1C590870000E8C72 /* ViewController.m in Sources */,
 				23BB327A1C590870000E8C72 /* AppDelegate.m in Sources */,
 				23BB32771C590870000E8C72 /* main.m in Sources */,
@@ -411,8 +507,10 @@
 		};
 		23BB32A01C590870000E8C72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58DC2E16F8B74D6AC2C99C2B /* Pods-ImageX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "ImageX/ImageX-prefix.h";
 				INFOPLIST_FILE = ImageX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hoangtrieukhang.ImageX;
@@ -422,8 +520,10 @@
 		};
 		23BB32A11C590870000E8C72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8C7F3C80DF2BFA580C2680 /* Pods-ImageX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "ImageX/ImageX-prefix.h";
 				INFOPLIST_FILE = ImageX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hoangtrieukhang.ImageX;
@@ -498,6 +598,7 @@
 				23BB32A11C590870000E8C72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23BB32A21C590870000E8C72 /* Build configuration list for PBXNativeTarget "ImageXTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +607,7 @@
 				23BB32A41C590870000E8C72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23BB32A51C590870000E8C72 /* Build configuration list for PBXNativeTarget "ImageXUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +616,7 @@
 				23BB32A71C590870000E8C72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

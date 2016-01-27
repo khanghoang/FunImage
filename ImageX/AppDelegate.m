@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [PXRequest setConsumerKey:CUSTOMER_KEY
+               consumerSecret:CUSTOMER_SECRET];
     return YES;
 }
 
