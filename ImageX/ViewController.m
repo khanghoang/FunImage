@@ -10,6 +10,8 @@
 #import "KHHomeImageCollectionViewCell.h"
 #import "KHDetailsViewController.h"
 
+#define PER_PAGE 30
+
 @interface ViewController ()
 <
 UICollectionViewDelegate,
@@ -37,6 +39,7 @@ UICollectionViewDelegateFlowLayout
     self.popularImages = @[];
     self.featureImages = @[];
     self.currentPage = 0;
+    self.hasNextPage = YES;
     self.type = PXAPIHelperPhotoFeaturePopular;
     
     [self.collectionImage registerNib:[UINib nibWithNibName:@"KHHomeImageCollectionViewCell" bundle:nil]
@@ -45,6 +48,10 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)loadImages {
+    
+    if (!self.hasNextPage) {
+        return;
+    }
     
     if (self.isFetching) {
         return;
@@ -56,9 +63,17 @@ UICollectionViewDelegateFlowLayout
     [self loadPage:++self.currentPage
           withType:self.type
       successBlock:^(NSDictionary *results) {
-          weakSelf.popularImages = [weakSelf.popularImages arrayByAddingObjectsFromArray:results[@"photos"]];
+          
+          NSArray *photos = results[@"photos"];
+          
+          weakSelf.popularImages = [weakSelf.popularImages arrayByAddingObjectsFromArray:photos];
           [weakSelf.collectionImage reloadData];
           weakSelf.isFetching = NO;
+          
+          if (photos.count < PER_PAGE) {
+              weakSelf.hasNextPage = NO;
+          }
+          
       } failureBlock:^(NSError *error) {
           weakSelf.isFetching = NO;
       }];
@@ -66,7 +81,7 @@ UICollectionViewDelegateFlowLayout
 
 - (void)loadPage:(NSInteger)page withType:(PXAPIHelperPhotoFeature)type successBlock:(void (^)(NSDictionary *results))successBlock failureBlock:(void (^)(NSError *error))failureBlock {
     [PXRequest requestForPhotoFeature:type
-                       resultsPerPage:30
+                       resultsPerPage:PER_PAGE
                                  page:page
                            completion: ^(NSDictionary *results, NSError *error) {
                                if (error) {
@@ -109,6 +124,7 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    if (!self.hasNextPage) return CGSizeZero;
     return CGSizeMake(self.view.bounds.size.width, 20);
 }
 
