@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KZd-8Q-bI4">
-                                <rect key="frame" x="10" y="0.0" width="580" height="600"/>
+                                <rect key="frame" x="6" y="0.0" width="588" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="-10" maxY="0.0"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HM5-aW-XIG">
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="-8" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="6" minimumInteritemSpacing="6" id="HM5-aW-XIG">
                                     <size key="itemSize" width="137" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -37,9 +37,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KZd-8Q-bI4" secondAttribute="bottom" id="RwL-Wr-6xe"/>
-                            <constraint firstAttribute="trailing" secondItem="KZd-8Q-bI4" secondAttribute="trailing" constant="10" id="SdA-bu-cJ9"/>
+                            <constraint firstAttribute="trailing" secondItem="KZd-8Q-bI4" secondAttribute="trailing" constant="6" id="SdA-bu-cJ9"/>
                             <constraint firstItem="KZd-8Q-bI4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WK9-KS-coh"/>
-                            <constraint firstItem="KZd-8Q-bI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="unJ-xD-a6I"/>
+                            <constraint firstItem="KZd-8Q-bI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="6" id="unJ-xD-a6I"/>
                         </constraints>
                     </view>
                     <connections>

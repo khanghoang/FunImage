@@ -44,7 +44,7 @@ UICollectionViewDelegateFlowLayout
                              completion: ^(BOOL success) {
                                  if (success) {
                                      [PXRequest requestForPhotoFeature:PXAPIHelperPhotoFeaturePopular
-                                                        resultsPerPage:20
+                                                        resultsPerPage:100
                                                                   page:1
                                                             completion: ^(NSDictionary *results, NSError *error) {
                                                                 weakSelf.popularImages = results[@"photos"];
@@ -76,7 +76,7 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat dim = ([UIScreen mainScreen].bounds.size.width - 20 - 10) / 2;
+    CGFloat dim = ([UIScreen mainScreen].bounds.size.width - 12 - 12) / 3;
     return CGSizeMake(dim, dim);
 }
 
