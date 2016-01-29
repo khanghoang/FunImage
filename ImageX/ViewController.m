@@ -19,6 +19,8 @@ UICollectionViewDelegateFlowLayout
 @property (copy, nonatomic) NSArray *popularImages;
 @property (copy, nonatomic) NSArray *featureImages;
 
+@property (assign, nonatomic) NSInteger currentPage;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionImage;
 
 @end
@@ -32,23 +34,37 @@ UICollectionViewDelegateFlowLayout
     self.popularImages = @[];
     self.featureImages = @[];
     
-//    [self.collectionImage registerClass:[KHHomeImageCollectionViewCell class]
-//             forCellWithReuseIdentifier:@"KHHomeImageCell"];
-    
-    [self.collectionImage registerNib:[UINib nibWithNibName:@"KHHomeImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"KHHomeImageCell"];
-    
+    [self.collectionImage registerNib:[UINib nibWithNibName:@"KHHomeImageCollectionViewCell" bundle:nil]
+           forCellWithReuseIdentifier:@"KHHomeImageCell"];
     
     __block typeof(self) weakSelf = self;
+    
+    [self loadPage:self.currentPage
+          withType:PXAPIHelperPhotoFeaturePopular
+      successBlock:^(NSDictionary *results) {
+          weakSelf.popularImages = results[@"photos"];
+          [weakSelf.collectionImage reloadData];
+      } failureBlock:^(NSError *error) {
+      }];
+    
+}
+
+- (void)loadPage:(NSInteger)page withType:(PXAPIHelperPhotoFeature)type successBlock:(void (^)(NSDictionary *results))successBlock failureBlock:(void (^)(NSError *error))failureBlock {
     [PXRequest authenticateWithUserName:USERNAME
                                password:PASSWORD
                              completion: ^(BOOL success) {
                                  if (success) {
-                                     [PXRequest requestForPhotoFeature:PXAPIHelperPhotoFeaturePopular
-                                                        resultsPerPage:100
-                                                                  page:1
+                                     [PXRequest requestForPhotoFeature:type
+                                                        resultsPerPage:30
+                                                                  page:page
                                                             completion: ^(NSDictionary *results, NSError *error) {
-                                                                weakSelf.popularImages = results[@"photos"];
-                                                                [weakSelf.collectionImage reloadData];
+                                                                if (error) {
+                                                                    if (failureBlock) {
+                                                                        failureBlock(error);
+                                                                    }
+                                                                } else {
+                                                                    successBlock(results);
+                                                                }
                                                             }];
                                      
                                  }
@@ -56,7 +72,6 @@ UICollectionViewDelegateFlowLayout
                                      
                                  }
                              }];
-    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
