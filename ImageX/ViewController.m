@@ -52,28 +52,18 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)loadPage:(NSInteger)page withType:(PXAPIHelperPhotoFeature)type successBlock:(void (^)(NSDictionary *results))successBlock failureBlock:(void (^)(NSError *error))failureBlock {
-    [PXRequest authenticateWithUserName:USERNAME
-                               password:PASSWORD
-                             completion: ^(BOOL success) {
-                                 if (success) {
-                                     [PXRequest requestForPhotoFeature:type
-                                                        resultsPerPage:30
-                                                                  page:page
-                                                            completion: ^(NSDictionary *results, NSError *error) {
-                                                                if (error) {
-                                                                    if (failureBlock) {
-                                                                        failureBlock(error);
-                                                                    }
-                                                                } else {
-                                                                    successBlock(results);
-                                                                }
-                                                            }];
-                                     
-                                 }
-                                 else {
-                                     
-                                 }
-                             }];
+    [PXRequest requestForPhotoFeature:type
+                       resultsPerPage:30
+                                 page:page
+                           completion: ^(NSDictionary *results, NSError *error) {
+                               if (error) {
+                                   if (failureBlock) {
+                                       failureBlock(error);
+                                   }
+                               } else {
+                                   successBlock(results);
+                               }
+                           }];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
