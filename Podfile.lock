@@ -18,6 +18,7 @@ PODS:
   - Mantle (2.0.6):
     - Mantle/extobjc (= 2.0.6)
   - Mantle/extobjc (2.0.6)
+  - Masonry (0.6.4)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -26,12 +27,14 @@ DEPENDENCIES:
   - 500px-iOS-api
   - AFNetworking
   - Mantle
+  - Masonry
   - SDWebImage
 
 SPEC CHECKSUMS:
   500px-iOS-api: d9e46cb6300cef1a12964641374aa467d3cfb891
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
 COCOAPODS: 0.39.0

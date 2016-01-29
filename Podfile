@@ -11,6 +11,7 @@ target 'ImageX' do
   pod "AFNetworking"
   pod "Mantle"
   pod "SDWebImage"
+  pod "Masonry"
 
 end
 
