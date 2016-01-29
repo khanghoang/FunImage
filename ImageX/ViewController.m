@@ -21,6 +21,8 @@ UICollectionViewDelegateFlowLayout
 @property (copy, nonatomic) NSArray *featureImages;
 
 @property (assign, nonatomic) NSInteger currentPage;
+@property (assign, nonatomic) BOOL hasNextPage;
+@property (assign, nonatomic) BOOL isFetching;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionImage;
 
@@ -34,21 +36,32 @@ UICollectionViewDelegateFlowLayout
     
     self.popularImages = @[];
     self.featureImages = @[];
+    self.currentPage = 0;
+    self.type = PXAPIHelperPhotoFeaturePopular;
     
     [self.collectionImage registerNib:[UINib nibWithNibName:@"KHHomeImageCollectionViewCell" bundle:nil]
            forCellWithReuseIdentifier:@"KHHomeImageCell"];
+    [self loadImages];
+}
+
+- (void)loadImages {
+    
+    if (self.isFetching) {
+        return;
+    }
+    
+    self.isFetching = YES;
     
     __block typeof(self) weakSelf = self;
-    
-    [self loadPage:self.currentPage
-          withType:PXAPIHelperPhotoFeaturePopular
+    [self loadPage:++self.currentPage
+          withType:self.type
       successBlock:^(NSDictionary *results) {
-          weakSelf.popularImages = results[@"photos"];
-          NSLog(@"%@", results[@"photos"]);
+          weakSelf.popularImages = [weakSelf.popularImages arrayByAddingObjectsFromArray:results[@"photos"]];
           [weakSelf.collectionImage reloadData];
+          weakSelf.isFetching = NO;
       } failureBlock:^(NSError *error) {
+          weakSelf.isFetching = NO;
       }];
-    
 }
 
 - (void)loadPage:(NSInteger)page withType:(PXAPIHelperPhotoFeature)type successBlock:(void (^)(NSDictionary *results))successBlock failureBlock:(void (^)(NSError *error))failureBlock {
@@ -77,10 +90,6 @@ UICollectionViewDelegateFlowLayout
     return cell;
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.popularImages.count ?: 30;
 }
@@ -97,6 +106,19 @@ UICollectionViewDelegateFlowLayout
         details.image = self.popularImages[indexPath.row];
         [self.navigationController pushViewController:details animated:YES];
     }
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    return CGSizeMake(self.view.bounds.size.width, 20);
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if (kind == UICollectionElementKindSectionFooter) {
+        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"LoadMoreFooterView" forIndexPath:indexPath];
+        [self loadImages];
+        return footerview;
+    }
+    return nil;
 }
 
 @end
