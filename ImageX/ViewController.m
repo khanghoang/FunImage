@@ -92,6 +92,7 @@ UICollectionViewDelegateFlowLayout
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     KHDetailsViewController *details = [[UIStoryboard storyboardWithName:@"KHDetailsStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"KHDetailsViewController"];
+    details.hidesBottomBarWhenPushed = YES;
     if (self.popularImages.count > 0) {
         details.image = self.popularImages[indexPath.row];
         [self.navigationController pushViewController:details animated:YES];
