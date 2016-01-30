@@ -8,7 +8,7 @@
         <!--Popular-->
         <scene sceneID="AxZ-p2-tXp">
             <objects>
-                <navigationController id="yrY-Bo-hnb" sceneMemberID="viewController">
+                <navigationController title="Popular" id="yrY-Bo-hnb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Popular" id="kU1-Mh-FXb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vnk-uy-MXc">
@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-384" y="269"/>
         </scene>
-        <!--View Controller-->
+        <!--Popular-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Popular" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -78,7 +78,7 @@
                             <constraint firstItem="KZd-8Q-bI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="6" id="unJ-xD-a6I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="542-uz-fY5"/>
+                    <navigationItem key="navigationItem" title="Popular" id="542-uz-fY5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionImage" destination="KZd-8Q-bI4" id="z8B-5r-CTO"/>
@@ -112,7 +112,7 @@
         <!--Upcoming-->
         <scene sceneID="1ks-jQ-IrR">
             <objects>
-                <navigationController id="ayG-LX-PwJ" sceneMemberID="viewController">
+                <navigationController title="Upcoming" id="ayG-LX-PwJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Upcoming" id="OVm-HG-w4e"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lpc-5a-2gR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="-384" y="923"/>
         </scene>
-        <!--View Controller-->
+        <!--Upcoming-->
         <scene sceneID="3ki-We-Yqj">
             <objects>
                 <viewController id="di9-LD-8AL" customClass="ViewController" sceneMemberID="viewController">
@@ -176,7 +176,7 @@
                             <constraint firstItem="7mW-as-Bnl" firstAttribute="top" secondItem="0XJ-tz-QgK" secondAttribute="bottom" constant="-49" id="yjn-pI-0BM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kxX-UD-Yy9"/>
+                    <navigationItem key="navigationItem" title="Upcoming" id="kxX-UD-Yy9"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="type">
                             <integer key="value" value="1"/>
@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="15" y="923"/>
         </scene>
-        <!--Editors-->
+        <!--Editor-->
         <scene sceneID="rES-8D-I2k">
             <objects>
-                <navigationController id="iWP-UX-6rk" sceneMemberID="viewController">
+                <navigationController title="Editor" id="iWP-UX-6rk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Editors" id="QKq-QJ-XGM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="40g-Ba-EaX">
@@ -208,7 +208,7 @@
             </objects>
             <point key="canvasLocation" x="-384" y="1599"/>
         </scene>
-        <!--View Controller-->
+        <!--Editors-->
         <scene sceneID="yZ4-2Y-UJa">
             <objects>
                 <viewController id="1CG-Cx-NQG" customClass="ViewController" sceneMemberID="viewController">
@@ -258,7 +258,7 @@
                             <constraint firstItem="gok-nY-uUQ" firstAttribute="top" secondItem="ZEe-jz-Ljs" secondAttribute="top" id="qHG-PP-a5Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cbu-yd-7Nh"/>
+                    <navigationItem key="navigationItem" title="Editors" id="cbu-yd-7Nh"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="type">
                             <integer key="value" value="2"/>
@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="22" y="1599"/>
         </scene>
-        <!--FreshToday-->
+        <!--Fresh Today-->
         <scene sceneID="QjY-KU-OwU">
             <objects>
-                <navigationController id="xI4-yy-0BN" sceneMemberID="viewController">
+                <navigationController title="Fresh Today" id="xI4-yy-0BN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="FreshToday" id="S7w-lF-ZxS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DlX-U7-fFr">
@@ -295,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="-384" y="2247"/>
         </scene>
-        <!--View Controller-->
+        <!--Fresh Today-->
         <scene sceneID="uwP-YU-jIw">
             <objects>
                 <viewController id="Qen-ip-GYu" customClass="ViewController" sceneMemberID="viewController">
@@ -345,7 +345,7 @@
                             <constraint firstItem="4iR-TY-Nr3" firstAttribute="leading" secondItem="enc-Wa-wUV" secondAttribute="leading" constant="6" id="v2a-61-HPs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pcX-EG-K2o"/>
+                    <navigationItem key="navigationItem" title="Fresh Today" id="pcX-EG-K2o"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="type">
                             <integer key="value" value="2"/>
