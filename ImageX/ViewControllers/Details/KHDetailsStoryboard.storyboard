@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,14 +23,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-bV-uPF">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="222" id="GOr-Xz-h4U"/>
+                                            <constraint firstAttribute="width" secondItem="pOd-bV-uPF" secondAttribute="height" multiplier="160:160" id="9Up-Tv-r4a"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIn-Li-Ymc">
-                                        <rect key="frame" x="0.0" y="220" width="320" height="53"/>
+                                        <rect key="frame" x="0.0" y="318" width="320" height="53"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXL-y8-xQo">
                                                 <rect key="frame" x="18" y="51" width="303" height="1"/>
@@ -58,7 +59,7 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-no-0Ut">
-                                        <rect key="frame" x="8" y="272" width="312" height="296"/>
+                                        <rect key="frame" x="8" y="370" width="312" height="296"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="296" id="nqf-UH-Qo7"/>
@@ -106,6 +107,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="datetimeLabel" destination="c6S-5c-Crx" id="QOi-tg-StJ"/>
                         <outlet property="descriptionHeightConstrant" destination="nqf-UH-Qo7" id="aDY-LJ-aSg"/>
                         <outlet property="mainImage" destination="pOd-bV-uPF" id="naV-KT-KOR"/>
                         <outlet property="textViewDescription" destination="9Qw-no-0Ut" id="6rZ-yc-0bk"/>
