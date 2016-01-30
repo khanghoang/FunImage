@@ -11,6 +11,8 @@
 		23179D211C5BC22200291CB4 /* KHDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23179D201C5BC22200291CB4 /* KHDetailsStoryboard.storyboard */; };
 		23179D241C5BC49600291CB4 /* KHMainImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23179D231C5BC49600291CB4 /* KHMainImageTableViewCell.m */; };
 		238E121A1C5CD6EA0067012B /* KHDateFormatterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 238E12191C5CD6EA0067012B /* KHDateFormatterManager.m */; };
+		238E121F1C5CFBE60067012B /* KHUserPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238E121D1C5CFBE60067012B /* KHUserPageViewController.m */; };
+		238E12201C5CFBE60067012B /* KHUserPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238E121E1C5CFBE60067012B /* KHUserPageViewController.xib */; };
 		23BB32771C590870000E8C72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB32761C590870000E8C72 /* main.m */; };
 		23BB327A1C590870000E8C72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB32791C590870000E8C72 /* AppDelegate.m */; };
 		23BB327D1C590870000E8C72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB327C1C590870000E8C72 /* ViewController.m */; };
@@ -49,6 +51,9 @@
 		23179D231C5BC49600291CB4 /* KHMainImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMainImageTableViewCell.m; sourceTree = "<group>"; };
 		238E12181C5CD6EA0067012B /* KHDateFormatterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHDateFormatterManager.h; sourceTree = "<group>"; };
 		238E12191C5CD6EA0067012B /* KHDateFormatterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHDateFormatterManager.m; sourceTree = "<group>"; };
+		238E121C1C5CFBE60067012B /* KHUserPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHUserPageViewController.h; sourceTree = "<group>"; };
+		238E121D1C5CFBE60067012B /* KHUserPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHUserPageViewController.m; sourceTree = "<group>"; };
+		238E121E1C5CFBE60067012B /* KHUserPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KHUserPageViewController.xib; sourceTree = "<group>"; };
 		23BB32721C590870000E8C72 /* ImageX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BB32761C590870000E8C72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23BB32781C590870000E8C72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +128,17 @@
 			path = Managers/DateFormaters;
 			sourceTree = "<group>";
 		};
+		238E121B1C5CFBC50067012B /* UserPage */ = {
+			isa = PBXGroup;
+			children = (
+				238E121C1C5CFBE60067012B /* KHUserPageViewController.h */,
+				238E121D1C5CFBE60067012B /* KHUserPageViewController.m */,
+				238E121E1C5CFBE60067012B /* KHUserPageViewController.xib */,
+			);
+			name = UserPage;
+			path = ViewControllers/UserPage;
+			sourceTree = "<group>";
+		};
 		23BB32691C590870000E8C72 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +164,7 @@
 		23BB32741C590870000E8C72 /* ImageX */ = {
 			isa = PBXGroup;
 			children = (
+				238E121B1C5CFBC50067012B /* UserPage */,
 				238E12171C5CD6C40067012B /* DateFormaters */,
 				23179D1A1C5BAEA300291CB4 /* Details */,
 				23C540511C5917BB00C01B03 /* Home */,
@@ -326,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23C540561C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib in Resources */,
+				238E12201C5CFBE60067012B /* KHUserPageViewController.xib in Resources */,
 				23BB32851C590870000E8C72 /* LaunchScreen.storyboard in Resources */,
 				23BB32821C590870000E8C72 /* Assets.xcassets in Resources */,
 				23179D211C5BC22200291CB4 /* KHDetailsStoryboard.storyboard in Resources */,
@@ -405,6 +423,7 @@
 				23C540551C5917E900C01B03 /* KHHomeImageCollectionViewCell.m in Sources */,
 				23BB327D1C590870000E8C72 /* ViewController.m in Sources */,
 				23179D1E1C5BAEBA00291CB4 /* KHDetailsViewController.m in Sources */,
+				238E121F1C5CFBE60067012B /* KHUserPageViewController.m in Sources */,
 				23BB327A1C590870000E8C72 /* AppDelegate.m in Sources */,
 				238E121A1C5CD6EA0067012B /* KHDateFormatterManager.m in Sources */,
 				23BB32771C590870000E8C72 /* main.m in Sources */,

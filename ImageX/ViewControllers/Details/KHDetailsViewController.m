@@ -8,6 +8,7 @@
 
 #import "KHDetailsViewController.h"
 #import "KHMainImageTableViewCell.h"
+#import "KHUserPageViewController.h"
 
 @interface KHDetailsViewController ()
 
@@ -61,6 +62,10 @@
 
 - (void)onUserView {
     NSLog(@"Tap");
+    
+    KHUserPageViewController *userPage = [[KHUserPageViewController alloc] init];
+    userPage.userID = self.image[@"user"][@"id"];
+    [self.navigationController pushViewController:userPage animated:YES];
 }
 
 @end
