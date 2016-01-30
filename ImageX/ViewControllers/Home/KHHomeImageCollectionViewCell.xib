@@ -13,13 +13,19 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="202" height="221"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-9g-GsX">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-9g-GsX">
                         <rect key="frame" x="0.0" y="0.0" width="202" height="221"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="tfJ-9g-GsX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LBs-Qy-SHG"/>
+                <constraint firstAttribute="trailing" secondItem="tfJ-9g-GsX" secondAttribute="trailing" id="RZO-AK-RjY"/>
+                <constraint firstAttribute="bottom" secondItem="tfJ-9g-GsX" secondAttribute="bottom" id="ZFd-23-d33"/>
+                <constraint firstItem="tfJ-9g-GsX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="m3w-Z1-hK4"/>
+            </constraints>
             <size key="customSize" width="202" height="221"/>
             <connections>
                 <outlet property="imageView" destination="tfJ-9g-GsX" id="Scq-WH-vJ3"/>
