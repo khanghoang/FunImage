@@ -34,13 +34,11 @@ UICollectionViewDelegateFlowLayout
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     self.popularImages = @[];
     self.featureImages = @[];
     self.currentPage = 0;
     self.hasNextPage = YES;
-    self.type = PXAPIHelperPhotoFeaturePopular;
     
     [self.collectionImage registerNib:[UINib nibWithNibName:@"KHHomeImageCollectionViewCell" bundle:nil]
            forCellWithReuseIdentifier:@"KHHomeImageCell"];
