@@ -46,7 +46,6 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)loadImages {
-    
     if (!self.hasNextPage) {
         return;
     }

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KHUserDetailsHeaderView" id="U6b-Vx-4bR" customClass="KHUserDetailsHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tix-j3-2RH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYz-ja-Vb1">
+                    <rect key="frame" x="133" y="176" width="54" height="54"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVj-Gn-aBX">
+                            <rect key="frame" x="2" y="2" width="50" height="50"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="OwE-P3-XRf"/>
+                        <constraint firstAttribute="width" constant="54" id="kNV-SF-JvJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="27"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LC-GP-x56">
+                    <rect key="frame" x="61" y="233" width="198" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="198" id="fVT-zZ-QXb"/>
+                        <constraint firstAttribute="height" constant="21" id="lFl-Qa-klh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.2219199935" green="0.2219199935" blue="0.2219199935" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gYz-ja-Vb1" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="2no-Km-I6P"/>
+                <constraint firstItem="Tix-j3-2RH" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="59J-5I-q8S"/>
+                <constraint firstAttribute="bottom" secondItem="3LC-GP-x56" secondAttribute="bottom" constant="12" id="7Ph-fX-tBo"/>
+                <constraint firstItem="Tix-j3-2RH" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="BA8-fp-R6X"/>
+                <constraint firstAttribute="trailing" secondItem="Tix-j3-2RH" secondAttribute="trailing" id="JqD-c9-M4G"/>
+                <constraint firstAttribute="bottom" secondItem="Tix-j3-2RH" secondAttribute="bottom" constant="59" id="O3T-9g-45O"/>
+                <constraint firstAttribute="bottom" secondItem="gYz-ja-Vb1" secondAttribute="bottom" constant="36" id="nSm-aW-3nP"/>
+                <constraint firstItem="3LC-GP-x56" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="tFE-4i-202"/>
+            </constraints>
+            <connections>
+                <outlet property="coverImage" destination="Tix-j3-2RH" id="mum-aU-P1o"/>
+                <outlet property="userAvatar" destination="oVj-Gn-aBX" id="IFo-yJ-4LD"/>
+                <outlet property="usernameLabel" destination="3LC-GP-x56" id="Tza-Wf-lVc"/>
+                <outlet property="wrapUserAvatarImage" destination="gYz-ja-Vb1" id="t3p-cq-T5m"/>
+            </connections>
+            <point key="canvasLocation" x="189" y="595"/>
+        </collectionReusableView>
+    </objects>
+</document>

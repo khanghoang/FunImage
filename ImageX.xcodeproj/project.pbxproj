@@ -10,9 +10,15 @@
 		23179D1E1C5BAEBA00291CB4 /* KHDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23179D1C1C5BAEBA00291CB4 /* KHDetailsViewController.m */; };
 		23179D211C5BC22200291CB4 /* KHDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23179D201C5BC22200291CB4 /* KHDetailsStoryboard.storyboard */; };
 		23179D241C5BC49600291CB4 /* KHMainImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23179D231C5BC49600291CB4 /* KHMainImageTableViewCell.m */; };
+		23877A141C5DC9120035A805 /* KHUserDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23877A121C5DC9120035A805 /* KHUserDetailsHeaderView.m */; };
+		23877A151C5DC9120035A805 /* KHUserDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23877A131C5DC9120035A805 /* KHUserDetailsHeaderView.xib */; };
+		23877A191C5DC9250035A805 /* KHLoadMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23877A171C5DC9250035A805 /* KHLoadMoreFooterView.m */; };
+		23877A1A1C5DC9250035A805 /* KHLoadMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23877A181C5DC9250035A805 /* KHLoadMoreFooterView.xib */; };
 		238E121A1C5CD6EA0067012B /* KHDateFormatterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 238E12191C5CD6EA0067012B /* KHDateFormatterManager.m */; };
 		238E121F1C5CFBE60067012B /* KHUserPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238E121D1C5CFBE60067012B /* KHUserPageViewController.m */; };
 		238E12201C5CFBE60067012B /* KHUserPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238E121E1C5CFBE60067012B /* KHUserPageViewController.xib */; };
+		23901D221C5E4DCB0038BAE6 /* KHPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 23901D211C5E4DCB0038BAE6 /* KHPhoto.m */; };
+		23901D251C5E4DD90038BAE6 /* KHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23901D241C5E4DD90038BAE6 /* KHUser.m */; };
 		23BB32771C590870000E8C72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB32761C590870000E8C72 /* main.m */; };
 		23BB327A1C590870000E8C72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB32791C590870000E8C72 /* AppDelegate.m */; };
 		23BB327D1C590870000E8C72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB327C1C590870000E8C72 /* ViewController.m */; };
@@ -49,11 +55,21 @@
 		23179D201C5BC22200291CB4 /* KHDetailsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KHDetailsStoryboard.storyboard; sourceTree = "<group>"; };
 		23179D221C5BC49600291CB4 /* KHMainImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHMainImageTableViewCell.h; sourceTree = "<group>"; };
 		23179D231C5BC49600291CB4 /* KHMainImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHMainImageTableViewCell.m; sourceTree = "<group>"; };
+		23877A111C5DC9120035A805 /* KHUserDetailsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHUserDetailsHeaderView.h; sourceTree = "<group>"; };
+		23877A121C5DC9120035A805 /* KHUserDetailsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHUserDetailsHeaderView.m; sourceTree = "<group>"; };
+		23877A131C5DC9120035A805 /* KHUserDetailsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KHUserDetailsHeaderView.xib; sourceTree = "<group>"; };
+		23877A161C5DC9250035A805 /* KHLoadMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHLoadMoreFooterView.h; sourceTree = "<group>"; };
+		23877A171C5DC9250035A805 /* KHLoadMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHLoadMoreFooterView.m; sourceTree = "<group>"; };
+		23877A181C5DC9250035A805 /* KHLoadMoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KHLoadMoreFooterView.xib; sourceTree = "<group>"; };
 		238E12181C5CD6EA0067012B /* KHDateFormatterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHDateFormatterManager.h; sourceTree = "<group>"; };
 		238E12191C5CD6EA0067012B /* KHDateFormatterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHDateFormatterManager.m; sourceTree = "<group>"; };
 		238E121C1C5CFBE60067012B /* KHUserPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHUserPageViewController.h; sourceTree = "<group>"; };
 		238E121D1C5CFBE60067012B /* KHUserPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHUserPageViewController.m; sourceTree = "<group>"; };
 		238E121E1C5CFBE60067012B /* KHUserPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KHUserPageViewController.xib; sourceTree = "<group>"; };
+		23901D201C5E4DCB0038BAE6 /* KHPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPhoto.h; sourceTree = "<group>"; };
+		23901D211C5E4DCB0038BAE6 /* KHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPhoto.m; sourceTree = "<group>"; };
+		23901D231C5E4DD90038BAE6 /* KHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHUser.h; sourceTree = "<group>"; };
+		23901D241C5E4DD90038BAE6 /* KHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHUser.m; sourceTree = "<group>"; };
 		23BB32721C590870000E8C72 /* ImageX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BB32761C590870000E8C72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23BB32781C590870000E8C72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,9 +150,26 @@
 				238E121C1C5CFBE60067012B /* KHUserPageViewController.h */,
 				238E121D1C5CFBE60067012B /* KHUserPageViewController.m */,
 				238E121E1C5CFBE60067012B /* KHUserPageViewController.xib */,
+				23877A111C5DC9120035A805 /* KHUserDetailsHeaderView.h */,
+				23877A121C5DC9120035A805 /* KHUserDetailsHeaderView.m */,
+				23877A131C5DC9120035A805 /* KHUserDetailsHeaderView.xib */,
+				23877A161C5DC9250035A805 /* KHLoadMoreFooterView.h */,
+				23877A171C5DC9250035A805 /* KHLoadMoreFooterView.m */,
+				23877A181C5DC9250035A805 /* KHLoadMoreFooterView.xib */,
 			);
 			name = UserPage;
 			path = ViewControllers/UserPage;
+			sourceTree = "<group>";
+		};
+		23901D1F1C5E4DA20038BAE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23901D201C5E4DCB0038BAE6 /* KHPhoto.h */,
+				23901D211C5E4DCB0038BAE6 /* KHPhoto.m */,
+				23901D231C5E4DD90038BAE6 /* KHUser.h */,
+				23901D241C5E4DD90038BAE6 /* KHUser.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		23BB32691C590870000E8C72 = {
@@ -164,6 +197,7 @@
 		23BB32741C590870000E8C72 /* ImageX */ = {
 			isa = PBXGroup;
 			children = (
+				23901D1F1C5E4DA20038BAE6 /* Models */,
 				238E121B1C5CFBC50067012B /* UserPage */,
 				238E12171C5CD6C40067012B /* DateFormaters */,
 				23179D1A1C5BAEA300291CB4 /* Details */,
@@ -343,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				23C540561C5917E900C01B03 /* KHHomeImageCollectionViewCell.xib in Resources */,
+				23877A1A1C5DC9250035A805 /* KHLoadMoreFooterView.xib in Resources */,
+				23877A151C5DC9120035A805 /* KHUserDetailsHeaderView.xib in Resources */,
 				238E12201C5CFBE60067012B /* KHUserPageViewController.xib in Resources */,
 				23BB32851C590870000E8C72 /* LaunchScreen.storyboard in Resources */,
 				23BB32821C590870000E8C72 /* Assets.xcassets in Resources */,
@@ -420,13 +456,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23877A141C5DC9120035A805 /* KHUserDetailsHeaderView.m in Sources */,
+				23901D251C5E4DD90038BAE6 /* KHUser.m in Sources */,
 				23C540551C5917E900C01B03 /* KHHomeImageCollectionViewCell.m in Sources */,
 				23BB327D1C590870000E8C72 /* ViewController.m in Sources */,
 				23179D1E1C5BAEBA00291CB4 /* KHDetailsViewController.m in Sources */,
 				238E121F1C5CFBE60067012B /* KHUserPageViewController.m in Sources */,
 				23BB327A1C590870000E8C72 /* AppDelegate.m in Sources */,
 				238E121A1C5CD6EA0067012B /* KHDateFormatterManager.m in Sources */,
+				23877A191C5DC9250035A805 /* KHLoadMoreFooterView.m in Sources */,
 				23BB32771C590870000E8C72 /* main.m in Sources */,
+				23901D221C5E4DCB0038BAE6 /* KHPhoto.m in Sources */,
 				23179D241C5BC49600291CB4 /* KHMainImageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
