@@ -10,6 +10,6 @@
 
 @interface KHUserDetailsHeaderView : UICollectionReusableView
 
-- (void)configWithData:(NSDictionary *)data;
+- (void)configWithUser:(KHUser *)user;
 
 @end

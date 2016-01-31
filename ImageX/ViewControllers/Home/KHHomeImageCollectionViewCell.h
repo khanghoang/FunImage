@@ -10,6 +10,6 @@
 
 @interface KHHomeImageCollectionViewCell : UICollectionViewCell
 
-- (void)configWithData:(NSDictionary *)data;
+- (void)configWithData:(KHPhoto *)photo;
 
 @end

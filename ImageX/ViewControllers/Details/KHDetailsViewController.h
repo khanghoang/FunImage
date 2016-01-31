@@ -10,6 +10,6 @@
 
 @interface KHDetailsViewController : UIViewController
 
-@property (copy, nonatomic) NSDictionary *image;
+@property (strong, nonatomic) KHPhoto *photo;
 
 @end

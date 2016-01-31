@@ -39,7 +39,7 @@ UICollectionViewDataSource
     self.currentPage = 0;
     self.arrPhotos = @[];
     
-    self.navigationController.title = self.username;
+    self.navigationItem.title = self.user.fullname;
     
     [self.collectionViewImages registerNib:[UINib nibWithNibName:@"KHUserDetailsHeaderView" bundle:nil]
                 forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"KHUserDetailsHeaderView"];
@@ -99,7 +99,7 @@ UICollectionViewDataSource
     [self loadPage:++self.currentPage
       successBlock:^(NSDictionary *results) {
           
-          NSArray *photos = results[@"photos"];
+          NSArray *photos = [MTLJSONAdapter modelsOfClass:[KHPhoto class] fromJSONArray:results[@"photos"] error:nil];
           
           weakSelf.arrPhotos = [weakSelf.arrPhotos arrayByAddingObjectsFromArray:photos];
           weakSelf.isFetching = NO;
@@ -119,7 +119,7 @@ UICollectionViewDataSource
 }
 
 - (void)loadPage:(NSInteger)page successBlock:(void (^)(NSDictionary *results))successBlock failureBlock:(void (^)(NSError *error))failureBlock {
-    [PXRequest requestForPhotosOfUserID:[self.userID integerValue] userFeature:PXAPIHelperUserPhotoFeaturePhotos resultsPerPage:PER_PAGE page:page photoSizes:kPXAPIHelperDefaultPhotoSize completion:^(NSDictionary *results, NSError *error) {
+    [PXRequest requestForPhotosOfUserID:[self.user.userID integerValue] userFeature:PXAPIHelperUserPhotoFeaturePhotos resultsPerPage:PER_PAGE page:page photoSizes:kPXAPIHelperDefaultPhotoSize completion:^(NSDictionary *results, NSError *error) {
         if (error && failureBlock) {
             failureBlock(error);
         }
@@ -151,7 +151,7 @@ UICollectionViewDataSource
     if (kind == UICollectionElementKindSectionHeader) {
         KHUserDetailsHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"KHUserDetailsHeaderView" forIndexPath:indexPath];
         
-        [headerView configWithData:nil];
+        [headerView configWithUser:self.user];
         
         return headerView;
     }
@@ -192,7 +192,7 @@ UICollectionViewDataSource
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     KHDetailsViewController *details = [[UIStoryboard storyboardWithName:@"KHDetailsStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"KHDetailsViewController"];
     if (self.arrPhotos.count > 0) {
-        details.image = self.arrPhotos[indexPath.row];
+        details.photo = self.arrPhotos[indexPath.row];
         [self.navigationController pushViewController:details animated:YES];
     }
 }

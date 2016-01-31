@@ -11,6 +11,7 @@
 @interface KHDateFormatterManager()
 
 @property (strong, nonatomic) NSDateFormatter *formatter;
+@property (strong, nonatomic) NSDateFormatter *displayFormatter;
 
 @end
 
@@ -31,6 +32,9 @@
     if (self) {
         _formatter = [[NSDateFormatter alloc] init];
         _formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
+        
+        _displayFormatter = [[NSDateFormatter alloc] init];
+        _displayFormatter.dateFormat = @"EEE, dd MMM yyyy";
     }
     
     return self;

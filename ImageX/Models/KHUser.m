@@ -8,6 +8,30 @@
 
 #import "KHUser.h"
 
+@interface KHUser()
+<
+MTLJSONSerializing
+>
+
+@end
+
 @implementation KHUser
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+        @"userID": @"id",
+        @"fullname": @"fullname",
+        @"avatarURL": @"avatars.default.https",
+        @"coverImageURL": @"cover_url",
+        };
+}
+
++ (NSValueTransformer *)coverImageURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)avatarURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
 
 @end

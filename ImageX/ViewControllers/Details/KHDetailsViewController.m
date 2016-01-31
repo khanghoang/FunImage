@@ -34,37 +34,26 @@
     UITapGestureRecognizer *tapOnUserView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onUserView)];
     [self.userView addGestureRecognizer:tapOnUserView];
     
-    // set main image
-    [self.mainImage sd_setImageWithURL:[NSURL URLWithString:[self.image[@"image_url"] firstObject]]];
-    [self.userAvatar sd_setImageWithURL:self.image[@"user"][@"avatars"][@"default"][@"https"]];
-    self.usernameLabel.text = self.image[@"user"][@"fullname"];
+    self.navigationItem.title = self.photo.name;
     
-    // round the avatar
-    self.userAvatar.layer.cornerRadius = 20;
-    self.userAvatar.layer.masksToBounds = YES;
+    // set main image
+    [self.mainImage sd_setImageWithURL:[NSURL URLWithString:[self.photo.arrSizes firstObject][@"https_url"]]];
+    [self.userAvatar sd_setImageWithURL:self.photo.user.avatarURL];
+    self.usernameLabel.text = self.photo.user.fullname;
     
     // format the createTime
-    NSDate *createdAt = [[KHDateFormatterManager sharedInstance].formatter dateFromString:self.image[@"created_at"]];
-    self.datetimeLabel.text = [self displayCreatedTime:createdAt];
+    self.datetimeLabel.text = self.photo.getCreatedAtDisplayString;
     
-    self.textViewDescription.text = @"dummy description";
+    self.textViewDescription.text = self.photo.imageDescription;
     
     // adjust the height of the desciption
     CGSize sizeThatFitsTextView = [self.textViewDescription sizeThatFits:CGSizeMake(self.textViewDescription.frame.size.width, MAXFLOAT)];
     self.descriptionHeightConstrant.constant = sizeThatFitsTextView.height;
 }
 
-- (NSString *)displayCreatedTime:(NSDate *)date {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"EEE, dd MMM yyyy";
-    return [formatter stringFromDate:date];
-}
-
 - (void)onUserView {
-    NSLog(@"Tap");
-    
     KHUserPageViewController *userPage = [[KHUserPageViewController alloc] init];
-    userPage.userID = self.image[@"user"][@"id"];
+    userPage.user = self.photo.user;
     [self.navigationController pushViewController:userPage animated:YES];
 }
 

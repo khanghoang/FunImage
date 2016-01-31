@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "KHHomeImageCollectionViewCell.h"
 #import "KHDetailsViewController.h"
+#import "KHPhoto.h"
 
 #define PER_PAGE 30
 
@@ -61,8 +62,8 @@ UICollectionViewDelegateFlowLayout
           withType:self.type
       successBlock:^(NSDictionary *results) {
           
-          NSArray *photos = results[@"photos"];
-          
+          NSError *error;
+          NSArray *photos = [MTLJSONAdapter modelsOfClass:[KHPhoto class] fromJSONArray:results[@"photos"] error:&error];
           weakSelf.popularImages = [weakSelf.popularImages arrayByAddingObjectsFromArray:photos];
           [weakSelf.collectionImage reloadData];
           weakSelf.isFetching = NO;
@@ -98,7 +99,7 @@ UICollectionViewDelegateFlowLayout
     if (self.popularImages.count > 0) {
         data = self.popularImages[indexPath.row];
     }
-    [cell configWithData:data];
+    [cell configWithData:(KHPhoto *)data];
     return cell;
 }
 
@@ -115,7 +116,7 @@ UICollectionViewDelegateFlowLayout
     KHDetailsViewController *details = [[UIStoryboard storyboardWithName:@"KHDetailsStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"KHDetailsViewController"];
     details.hidesBottomBarWhenPushed = YES;
     if (self.popularImages.count > 0) {
-        details.image = self.popularImages[indexPath.row];
+        details.photo = self.popularImages[indexPath.row];
         [self.navigationController pushViewController:details animated:YES];
     }
 }

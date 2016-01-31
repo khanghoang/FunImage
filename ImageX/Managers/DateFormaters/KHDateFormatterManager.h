@@ -11,6 +11,7 @@
 @interface KHDateFormatterManager : NSObject
 
 @property (readonly, nonatomic) NSDateFormatter *formatter;
+@property (readonly, nonatomic) NSDateFormatter *displayFormatter;
 
 + (instancetype)sharedInstance;
 

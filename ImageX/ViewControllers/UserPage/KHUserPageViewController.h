@@ -10,8 +10,6 @@
 
 @interface KHUserPageViewController : UIViewController
 
-@property (strong, nonatomic) NSNumber *userID;
-@property (strong, nonatomic) NSURL *userAvatarURL;
-@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) KHUser *user;
 
 @end

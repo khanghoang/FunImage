@@ -8,7 +8,7 @@
         <!--Popular-->
         <scene sceneID="AxZ-p2-tXp">
             <objects>
-                <navigationController title="Popular" id="yrY-Bo-hnb" sceneMemberID="viewController">
+                <navigationController id="yrY-Bo-hnb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Popular" id="kU1-Mh-FXb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vnk-uy-MXc">
@@ -112,7 +112,7 @@
         <!--Upcoming-->
         <scene sceneID="1ks-jQ-IrR">
             <objects>
-                <navigationController title="Upcoming" id="ayG-LX-PwJ" sceneMemberID="viewController">
+                <navigationController id="ayG-LX-PwJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Upcoming" id="OVm-HG-w4e"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lpc-5a-2gR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="15" y="923"/>
         </scene>
-        <!--Editor-->
+        <!--Editors-->
         <scene sceneID="rES-8D-I2k">
             <objects>
-                <navigationController title="Editor" id="iWP-UX-6rk" sceneMemberID="viewController">
+                <navigationController id="iWP-UX-6rk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Editors" id="QKq-QJ-XGM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="40g-Ba-EaX">
@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="22" y="1599"/>
         </scene>
-        <!--Fresh Today-->
+        <!--FreshToday-->
         <scene sceneID="QjY-KU-OwU">
             <objects>
-                <navigationController title="Fresh Today" id="xI4-yy-0BN" sceneMemberID="viewController">
+                <navigationController id="xI4-yy-0BN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="FreshToday" id="S7w-lF-ZxS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DlX-U7-fFr">

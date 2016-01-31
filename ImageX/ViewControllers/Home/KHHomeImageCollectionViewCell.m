@@ -20,8 +20,8 @@
     // Initialization code
 }
 
-- (void)configWithData:(NSDictionary *)data {
-    NSString *urlStr = [data[@"image_url"] firstObject];
+- (void)configWithData:(KHPhoto *)photo {
+    NSString *urlStr = [photo.arrSizes firstObject][@"https_url"];
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
 }
 

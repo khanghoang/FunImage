@@ -19,9 +19,10 @@
 
 @implementation KHUserDetailsHeaderView
 
-- (void)configWithData:(NSDictionary *)data {
-    [self.coverImage sd_setImageWithURL:[NSURL URLWithString:data[@"user"][@"cover_url"]]];
-    [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:data[@"user"][@"cover_url"]]];
+- (void)configWithUser:(KHUser *)user {
+    [self.coverImage sd_setImageWithURL:user.coverImageURL];
+    [self.userAvatar sd_setImageWithURL:user.avatarURL];
+    self.usernameLabel.text = user.fullname;
 }
 
 @end
